@@ -1,33 +1,30 @@
-# aplicativo-camera
-Projeto da Disciplica DESENHO DE APLICATIVOS PARA DISPOSITIVOS MÓVEIS  
-Criação de um aplicativo utilizando o recurso da câmera  
+package br.edu.puc.cameraandroid;
 
-Utilizando a API [BarCodeScanner](https://github.com/dm77/barcodescanner) foi criado um leitor que QR Code
-  
-![Imagem1 do app](https://i.imgur.com/aBTQ8i0m.jpg)  
-  
-![Imagem2 do app](https://i.imgur.com/NQEKjvcm.jpg)  
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
-### Dependencia  
-```
-    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
-```
+import android.Manifest;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
-### Permissões   
-```
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
+import com.google.zxing.Result;
 
-    <uses-feature
-        android:name="android.hardware.camera2.CameraDevice"
-        android:required="true" />
-    <uses-feature
-        android:name="android.hardware.camera.flash"
-        android:required="true" />
-```
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-### Metodos essenciais do app:
-```
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
 
     private ZXingScannerView scannerView;
@@ -63,8 +60,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         copiarTexto();
         abrirInfo();
     }
-
- @Override
+    @Override
     public void handleResult(Result rawResult) {
         edtResultado.setText( rawResult.getText() );
 
@@ -92,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         super.onPause();
         scannerView.stopCamera();
     }
-    
+
     private void ligarFlash(){
         final ImageButton btnFlash = findViewById(R.id.btnFlash);
         btnFlash.setOnClickListener(new View.OnClickListener() {
@@ -159,5 +155,6 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             }
         });
     }
-  }
-```
+
+
+}
