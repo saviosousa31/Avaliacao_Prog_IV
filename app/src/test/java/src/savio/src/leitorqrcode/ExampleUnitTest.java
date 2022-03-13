@@ -1,4 +1,4 @@
-package br.edu.puc.cameraandroid;
+package src.savio.src.leitorqrcode;
 
 import org.junit.Test;
 

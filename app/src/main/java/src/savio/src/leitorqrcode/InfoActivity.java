@@ -1,12 +1,7 @@
-package br.edu.puc.cameraandroid;
-
-import androidx.appcompat.app.AppCompatActivity;
+package src.savio.src.leitorqrcode;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageButton;
 

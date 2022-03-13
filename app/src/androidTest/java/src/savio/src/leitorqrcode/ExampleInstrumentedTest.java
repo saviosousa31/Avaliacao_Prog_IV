@@ -1,4 +1,4 @@
-package br.edu.puc.cameraandroid;
+package src.savio.src.leitorqrcode;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("br.edu.puc.cameraandroid", appContext.getPackageName());
+        assertEquals("br.savio.src.leitorqrcode", appContext.getPackageName());
     }
 }
