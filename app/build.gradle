@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "br.edu.puc.cameraandroid"
+        applicationId "src.savio.src.leitorqrcode"
         minSdkVersion 27
         targetSdkVersion 29
         versionCode 1
